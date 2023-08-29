@@ -1,0 +1,61 @@
+* {
+    box-sizing:border-box;
+    
+}
+body{
+    background-image: url('images/camouflage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+footer {
+    background-color: yellowgreen;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+nav {
+    float:left;
+    width:30%;
+    padding:20px;
+    background-color:lightgrey;
+    border-radius:20px;
+    
+}
+ul {
+    list-style-type:none;
+  
+}
+li {
+    margin:20px;
+}
+.menu {
+    text-decoration:none;
+    color:black;
+    font-size:120%;
+}
+.menu:hover{
+    background-color:gray;
+ 
+}
+header {
+    margin:40px;
+    text-align:center;
+    background-color:greenyellow;
+    padding: 30px;
+    border-radius:20px;
+}
+h2 {
+    margin-inline-start:30px;
+    color:white;
+}
+article {
+    width:65%;
+    float:right;
+    background-color:green;
+    border-radius:20px;
+}
+.intro {
+    color:white;
+    padding: 20px;
+}
