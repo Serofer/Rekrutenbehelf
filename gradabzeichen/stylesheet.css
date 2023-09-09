@@ -1,0 +1,57 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+  background-image: url("../home/images/camouflage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: system-ui;
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+}
+
+header {
+  margin: 40px;
+  text-align: center;
+  background-color: greenyellow;
+  padding: 30px;
+  border-radius: 20px;
+}
+#home {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 15%;
+}
+#home:hover {
+  background-color: gray;
+}
+a {
+  text-decoration: none;
+}
+#gradabzeichen {
+
+}
+table,
+tr,
+th,
+td {
+  border: 1px solid red;
+  background-color: yellowgreen;
+  border-collapse: collapse;
+  padding:30px;
+  font-size:120%;
+}
+.table_pictures {
+  width: 200px;
+}
+h2 {
+    background-color:white;
+    width:15%;
+}

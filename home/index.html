@@ -12,39 +12,103 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="Images" />
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
+
   <body>
-    
-    <header>
-      <h1>Behelf für Rekruten Online</h1>
-    </header>
+    <div id="container">
+      <header>
+        <h1>Behelf für Rekruten Online</h1>
+      </header>
 
-    <section>
-      <nav>
-        <ul>
-          <li><a class="menu" href="/gradabzeichen/index.html">Truppengattungs und Gradabzeichen</a></li>
-          <li><a class="menu" href="/sackbefehl/index.html">Sackbefehl</a></li>
-          <li><a class="menu" href="/militärische_formen/index.html">Militärische Formen</a></li>
-          <li><a class="menu" href="/sturmgewehr/index.html">Sturmgewehr und Munitionen</a></li>
-          <li><a class="menu" href="/rsg/index.html">Reizstoffsprühgerät</a></li>
-          <li><a class="menu" href="/abzeichen/index.html">Abzeichen</a></li>
-          <li><a class="menu" href="/tipps/index.html">Tipps</a></li>
-          <li><a class="menu" href="/morse/index.html">Exkurs: Morsen</a></li>
-          <li><a class="menu" href="/extras/index.html">Extras</a></li>
-        </ul>
-      </nav>
-    </section>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <a class="menu" href="/gradabzeichen/index.html"
+                >Truppengattungs- und Gradabzeichen</a
+              >
+            </li>
+            <li>
+              <a class="menu" href="/sackbefehl/index.html">Sackbefehl</a>
+            </li>
+            <li>
+              <a class="menu" href="/militärische_formen/index.html"
+                >Militärische Formen</a
+              >
+            </li>
+            <li>
+              <a class="menu" href="/sturmgewehr/index.html"
+                >Sturmgewehr und Munitionen</a
+              >
+            </li>
+            <li>
+              <a class="menu" href="/rsg/index.html">Reizstoffsprühgerät</a>
+            </li>
+            <li>
+              <a class="menu" href="/abzeichen/index.html">Abzeichen</a>
+            </li>
+            <li><a class="menu" href="/tipps/index.html">Tipps</a></li>
+            <li>
+              <a class="menu" href="/morse/index.html">Exkurs: Morsen</a>
+            </li>
+            <li><a class="menu" href="/extras/index.html">Extras</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <section>
       <article>
         <h2>Beschreibung</h2>
-        <p class="intro">Als Rekrut gibt es in den ersten 6 Wochen allerlei zu lernen. Viele Dinge sind neu und ungewohnt. Daher kann es ziemlich schnell anstrengend werden.
-          Jedoch kommt dabei diese Website ins Spiel. Sie stellt dir die wichtigsten militärischen Regeln und Gewohnheiten vor und bietet dabei noch interaktive  Übungen
-          und spannende Extras an. Hier werden dir auch Tipps für Dinge gegeben, die dir sonst keiner sagt. 
+        <p class="intro">
+          Als Rekrut gibt es in den ersten 6 Wochen allerlei zu lernen. Viele
+          Dinge sind neu und ungewohnt. Daher kann es ziemlich schnell
+          anstrengend werden. Jedoch kommt dabei diese Website ins Spiel. Sie
+          stellt dir die wichtigsten militärischen Regeln und Gewohnheiten vor
+          und bietet dabei noch interaktive Übungen und spannende Extras an.
+          Hier werden dir auch Tipps für Dinge gegeben, die dir sonst keiner
+          sagt.
         </p>
-    </article>
-  </section>
-  <footer>
-    <p>footer</p>
-  </footer>
+        <br>
+        <p class = "intro">Grundsätzlich können viele Informationen auch auch auf der offiziellen Website der Schweizer Armee gefunden werden: <a href="https://www.vtg.admin.ch/de/home.html">www.vtg.admin.ch</a></p>
+      </article>
+
+      <section class="video">
+        <iframe
+          width="672"
+          height="378"
+          src="https://www.youtube.com/embed/y2w7yXN31XI?si=9T9JVhQFRvmf4Xut"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <div>
+        <address>
+          Amos von Wyl
+          <br />
+          Kreuzmatte 6
+          <br />
+          6056 Kägiswil
+          <br />
+          Kontakt:
+          <a href="mailto:vonwylamos@gmail.com" title="Write me a mail"
+            ><u>vonwylamos@gmail.com</u></a
+          >
+          <br>&copy;Copyright
+        </address>
+      </div>
+      <div class="coords">
+        <p id="text">Klicke auf den Button, um deine Koordinaten zu erhalten.</p>
+        <br />
+        <div id="display">
+          <button id="button" onclick="getLocation()">Koordinaten</button>
+          
+          <p id="demo"></p>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="/home/index.js"></script>
 </html>

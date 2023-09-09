@@ -1,61 +1,130 @@
 * {
-    box-sizing:border-box;
-    
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
 }
-body{
-    background-image: url('images/camouflage.jpg');
+
+body {
+    background-image: url("images/camouflage.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-}
-footer {
-    background-color: yellowgreen;
-    padding: 10px;
-    text-align: center;
-    color: white;
+    font-family: system-ui;
+    height: 100%;
   }
+  #container {
+    min-height: 100%;
+  }
+
+  header {
+    margin: 40px;
+    text-align: center;
+    background-color: greenyellow;
+    padding: 30px;
+    border-radius: 20px;
+  }
+.video {
+  float: right;
+  padding: 20px;
+  position: relative;
+  right: 100px;
+  margin-top: 50px;
+}
+
+
 nav {
-    float:left;
-    width:30%;
-    padding:20px;
-    background-color:lightgrey;
-    border-radius:20px;
-    
+  float: left;
+  width: 30%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: lightgrey;
+  border-radius: 20px;
 }
 ul {
-    list-style-type:none;
-  
+  list-style-type: none;
 }
+
+
 li {
-    margin:20px;
+  padding: 10px;
+  text-align: center;
+}
+li:hover {
+  background-color: gray;
 }
 .menu {
-    text-decoration:none;
-    color:black;
-    font-size:120%;
+  text-decoration: none;
+  color: black;
+  font-size: 120%;
+  padding: 10px;
 }
-.menu:hover{
-    background-color:gray;
- 
-}
-header {
-    margin:40px;
-    text-align:center;
-    background-color:greenyellow;
-    padding: 30px;
-    border-radius:20px;
-}
+
+
 h2 {
-    margin-inline-start:30px;
-    color:white;
+  color: white;
+  margin-inline-start: 30px;
+  padding-top: 20px;
 }
 article {
-    width:65%;
-    float:right;
-    background-color:green;
-    border-radius:20px;
+  width: 65%;
+  float: right;
+  background-color: green;
+  border-radius: 20px;
 }
 .intro {
-    color:white;
-    padding: 20px;
+  color: white;
+  margin: 30px;
 }
+
+/*everything inside the footer */
+#footer {
+  background-color: greenyellow;
+  position: relative;
+  height: 200px;
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+address {
+  float: left;
+  margin-inline-start: 30px;
+  margin-top: 30px;
+  
+}
+.coords {
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+  
+  
+  
+}
+#text {
+    width:100%;
+    padding:10px;
+}
+#display {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+}
+#button {
+  width: 200px;
+  height: 60px;
+  font-size: 150%;
+}
+
+/* footer end 
+
+dynamic home page */
+
+@media(max-width: 800px) {
+    #footer {
+        grid-template-columns: 1fr;
+        height:400px;
+    }
+}
+
+
