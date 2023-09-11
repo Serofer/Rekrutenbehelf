@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Militärische Formen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Militärische Formen</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+
 </head>
+
 <body>
-    
+  <header>
+    <h1>Militärische Formen</h1>
+  </header>
+  <div id="home">
+    <a href="/home/index.html">Zurück zur HomePage</a>
+  </div>
+  <div id="container">
+
+    <div id="Stellungen">
+      <h2>Diverses</h2>
+      <br />
+      <h3>Stellungen</h3>
+      <br>
+
+      <p class="visible" id="view_ruhn" onclick="Appear_Ruhn()">
+      </p>
+      <br />
+
+
+      <div class="invisible" id="hidden_ruhn">
+        <p><i>Allgemeines</i></p>
+        <br />
+        <p>
+          Nach dem Anmelden bei einem Ranghöheren nimmt der Einzelne die
+          Ruhnstellung ein.
+        </p>
+        <br />
+        <p>Sie ist gekennzeichnet durch:</p>
+        <ol type="a">
+          <li>
+            ruhige, aufrechte Haltung, wobei nicht die Unbeweglichkeit gefordert
+            ist;
+          </li>
+          <li>der Kopf ist in der Regel zum Vorgesetzten zu drehen.</li>
+        </ol>
+        <br />
+        <p>
+          <b><i>Ausführung ohne Sturmgewehr</i></b>
+        </p>
+        <br />
+        <ol>
+          <li>Front gegen Ranghöheren annehmen;</li>
+          <li>in leichter Grätschstellung aufrecht stehen;</li>
+          <li>Blick auf den Ranghöheren richten (Augenkontakt);</li>
+          <li>Hände auf dem Rücken (rechte Hand umfasst linkes Handgelenk, linke
+            Hand geschlossen). </li>
+        </ol>
+        <br>
+      </div>
+
+
+      <p class="visible" id="view_achtung" onclick="Appear_Achtung()"></p>
+      <div class="invisible" id="hidden_achtung">
+        <p><i>Allgemeines</i></p>
+        <br>
+        <p>Die Achtungstellung ist eine Präsentierform.</p>
+        <br>
+        <p>Sie ist gekennzeichnet durch:</p>
+        <ol type="a">
+          <li>geschlossene Absätze im 60° Winkel;</li>
+          <li>aufgerichtete Haltung, Kopf geradeaus;</li>
+          <li>Unbeweglichkeit:</li>
+        </ol>
+        <br>
+        <p>Die Achtungstellung wird eingenommen:
+        <ol type="a">
+          <li>beim An- und Abmelden als Einzelner;</li>
+          <li>als Meldender eines Verbandes;</li>
+          <li>beim Melden im Verband.</li>
+        </ol>
+        <p><i>Ausführung ohne Sturmgewehr;</i></p>
+        <ol>
+          <li>linken Fuss zum rechten Fuss stellen (Fusswinkel 60°);</li>
+          <li>Arme und Hände strecken,an den Körper anlegen;</li>
+          <li>Oberkörper aufrichten;</li>
+          <li>Kopf geradeaus richten und unbeweglich bleiben.</li>
+        </ol>
+        </p>
+      </div>
+      <br>
+      <h3>AV</h3>
+      <br>
+      <p>Jeden Morgen findet das AV statt. Dabei stett AV für Antrittsverlesen und hat den Nutzen, dass kontrolliert
+        werden kann, wer anwesend und einsatzbereit ist. Dabei versammelt sich die Kompanie jeden Morgen auf dem
+        AV-Platz und bildet in den Zügen jeweils Viererkolonnen. Dieser Prozess ist sehr militärisch und ist wichtig,
+        dass er sauber durchgeführt wird. Beim AV werden zudem Informationen für den Tag durchgegeben. Die
+        Bestandskontrolle führt der Hauptfeldweibel durch und er meldet den Bestand an den Kompaniekommandanten. Ähnlich
+        wie das Antrittsverlesen gibt es das Hauptverlesen für den Ausgang und Urlaub.</p>
+      <br>
+      Hier ist ein Überblick zum Aufbau der Kompanie (Organigramm):
+      <br>
+      <br>
+      <img id="org" src="/home/images/Organigramm.png" alt="Organigramm">
+    </div>
+
+    <div id="other">
+      <h2>Gefechtszeichen</h2>
+      <br>
+      <p>Die Gefechtszeichen werden während dem Gefecht zur Verständigung innerhalb der Truppe verwendet, sodass man
+        möglichst Geräusche und Sprechinhalt vermeiden kann.</p>
+      <br>
+      <img id="sign" src="/home/images/Gefechtszeichen.png" alt="Gefechtszeichen">
+    </div>
+  </div>
 </body>
+<script src="script.js"></script>
+
 </html>

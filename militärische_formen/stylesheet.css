@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../home/images/camouflage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: system-ui;
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+header {
+  margin: 30px;
+  text-align: center;
+  background-color: greenyellow;
+  padding: 30px;
+  border-radius: 20px;
+}
+#home {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 15%;
+  margin-inline-start: 30px;
+}
+#home:hover {
+  background-color: gray;
+}
+a {
+  text-decoration: none;
+}
+#Stellungen {
+  background-color: yellowgreen;
+  width: 90%;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 30px;
+}
+li {
+  margin-left: 18px;
+}
+.visible {
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+}
+
+.invisible {
+  display: none;
+  margin-top: 10px;
+}
+.visible:hover {
+  text-decoration: underline;
+}
+
+#other {
+  width: 90%;
+  float: right;
+  padding: 30px;
+  margin: 30px;
+  background-color: powderblue;
+  border-radius: 30px;
+}
+#org {
+  width: 700px;
+  mix-blend-mode: multiply;
+}
+@media (max-width: 1000px) {
+  #container {
+    grid-template-columns: 1fr;
+  }
+  #Stellungen {
+    width: 90%;
+  }
+  #other {
+    width: 90%;
+  }
+  img {
+    width: 400px;
+  }
+  #org {
+    width: 500px;
+  }
+  #home {
+    width: 60%;
+  }
+}

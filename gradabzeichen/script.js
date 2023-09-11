@@ -1,4 +1,5 @@
 var x = document.getElementById("table_1");
+var y = document.getElementById("table_2");
 const grad = [
   //Mannschaft
   "Soldat",
@@ -63,24 +64,57 @@ const grad_short = [
   "General",
 ];
 
+const trupp = [
+  "Infanterie",
+  "Panzertruppen",
+  "Artillerie",
+  "Fliegertruppen",
+  "Fliegerabwehrtruppen",
+  "Genietruppen",
+  "Führungsunterstützungstruppen",
+  "Rettungstruppen",
+  "Logistiktruppen",
+  "Sanitätstruppen",
+  "Militärpolizei",
+  "ABC-Abwehrtruppen",
+  "Spezialkräfte",
+];
+
 function display_table() {
+  var content = "<tr><th>Grad</th><th>Abzeichen</th></tr>";
 
-
-var content = "<tr><th>Grad</th><th>Abzeichen</th></tr>";
-
-for (let i = 0; i <= 22; i++) {
-  content =
-    content +
-    " <tr> <td>" +
-    grad[i] +
-    "</td><td><img class='table_pictures' src='/gradabzeichen/images/" +
-    grad[i] +
-    ".jpg' alt='Image_" +
-    grad_short[i] +
-    "' title='" +
-    grad_short[i] +
-    "' /></td>  </tr> ";
+  for (let i = 0; i <= 22; i++) {
+    content =
+      content +
+      " <tr> <td>" +
+      grad[i] +
+      "</td><td><img class='table_pictures' src='/gradabzeichen/images/Grad/" +
+      grad[i] +
+      ".jpg' alt='Image_" +
+      grad_short[i] +
+      "' title='" +
+      grad_short[i] +
+      "' /></td>  </tr> ";
+  }
+  //document.writeln(content);
+  x.innerHTML = content;
 }
-//document.writeln(content);
-x.innerHTML = content;
+function display_trupp() {
+  var content_tr = "<tr><th>Truppengattung</th><th>Abzeichen</th></tr>";
+
+  for (let i = 0; i <= 12; i++) {
+    content_tr =
+      content_tr +
+      " <tr> <td> " +
+      trupp[i] +
+      "</td> <td><img class='table_pictures' src='/gradabzeichen/images/Trupp/" +
+      trupp[i] +
+      ".jpg' alt=" +
+      trupp[i] +
+      "></td></tr>";
+  }
+
+  y.innerHTML = content_tr;
 }
+x.onload = display_table();
+y.onload = display_trupp();
