@@ -21,7 +21,7 @@ body {
 header {
   margin: 30px;
   text-align: center;
-  background-color: greenyellow;
+  background: linear-gradient(yellowgreen, green);
   padding: 30px;
   border-radius: 20px;
 }
@@ -39,13 +39,15 @@ a {
   text-decoration: none;
 }
 #explanation {
-  background-color: powderblue;
-  width: 60%;
+  background: linear-gradient(powderblue, lightyellow);
+  width: 90%;
   margin: 30px;
   padding: 20px;
   border-radius: 20px;
 }
-
+table {
+  align-items: center;
+}
 table,
 tr,
 th,
@@ -67,8 +69,17 @@ tr:nth-child(even) {
 
 #tool {
   background-color: powderblue;
-  width: 90%;
+  width: 100%;
   margin: 30px;
   padding: 20px;
   border-radius: 20px;
+}
+#boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1000px) {
+  #container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -169,9 +169,21 @@
         <div id="tool">
             <h2>Morsecode praktisch üben und anwenden</h2>
             <br>
-            <p>Hier kannst du mittels diesem Tool selbst Morsecode generieren lassen, zurückübersetzen und den Ton
+            <p>Hier kannst du mittels diesem Tool selbst Morsecode generieren lassen, zurück übersetzen und den Ton
                 abspielen. Mithilfe der Sliders kannst du diverse Einstellungen vornehmen. Viel Spass : &#41;</p>
             <br>
+            <div id="boxes">
+                <form name="A_Form" action="">
+                    <textarea name="alphabetic" id="alpha" cols="30" rows="10"></textarea>
+                    <br>
+                    <input type="button" value="Translate to Morse" onclick="AlphaToMorse()">
+                </form>
+                <form name="M_Form" action="">
+                    <textarea name="morsecode" id="morse" cols="30" rows="10"></textarea>
+                    <br>
+                    <input type="button" value="Translate to Alphanumeric" onclick="MorseToAlpha()">
+                </form>
+            </div>
         </div>
     </div>
 
