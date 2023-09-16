@@ -28,7 +28,7 @@ body {
     rgba(63, 218, 216, 1),
     rgba(47, 201, 226, 1)
   );
-  height: 600px;
+
   border-radius: 40px;
   margin: 30px;
   width: 90%;
@@ -55,6 +55,11 @@ header {
 }
 a {
   text-decoration: none;
+}
+
+ul {
+  text-align: left;
+  padding-left: 40px;
 }
 
 @media (max-width: 800px) {
