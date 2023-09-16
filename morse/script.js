@@ -83,7 +83,7 @@ function MorseToAlpha() {
   }
 
   console.log(translated_morse);
-  document.getElementById("alpha").textContent = translated_morse.trim();
+  document.getElementById("alpha").value = translated_morse.trim();
   translated_morse = "";
 }
 
@@ -97,6 +97,6 @@ function AlphaToMorse() {
     }
   }
   console.log(translation_string);
-  document.getElementById("morse").textContent = translation_string.trim();
+  document.getElementById("morse").value = translation_string.trim();
   translation_string = "";
 }

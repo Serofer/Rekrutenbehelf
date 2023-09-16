@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sturmgewehr und Munition</title>
+
+    <link rel="stylesheet" href="stylesheet.css" />
+
 </head>
+
 <body>
-    
+    <header>
+        <h1>Sturmgewehr und Munition</h1>
+    </header>
+    <div id="home">
+        <a href="/home/index.html">Zurück zur HomePage</a>
+    </div>
+    <div id="container">
+        <div id="Sturmgewehr">
+            <h2>Sturmgewehr 90 (Stgw90)</h2>
+            <br>
+            <p>Fahre über das Sturmgewehr, um die einzelnen bestandteile zu sehen.</p>
+            <br>
+            <img src="/sturmgewehr/images/stgw_90.jpg" alt="Sturmgewehr 90">
+            <table class="table1">
+                <tr class="table1">
+                    <th class="table1">Technische Daten</th>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Kaliber</td>
+                    <td class="table1">5,6 mm</td>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Gewicht ohne Magazin</td>
+                    <td class="table1">4100 g</td>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Länge</td>
+                    <td class="table1">1000 mm</td>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Lauflänge</td>
+                    <td class="table1">528 mm</td>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Länge Visier-Korn</td>
+                    <td class="table1">528 mm</td>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Länge mit umgeklapptem Kolben</td>
+                    <td class="table1">772 mm</td>
+                </tr>
+                <tr class="table1">
+                    <td class="table1">Technische Kadenz (Schuss/Minute)</td>
+                    <td class="table1">600-900</td>
+                </tr>
+            </table>
+            <br>
+            <h2>Regeln für das Schiessen</h2>
+            <br>
+            <p class="visible" id="view_sivo" onclick="Appear_sivo()"></p>
+
+            <div class="invisible" id="hidden_sivo">
+                <ol>
+                    <li>Alle Waffen sind immer als geladen zu betrachten.</li>
+                    <li>Nie eine Waffe auf etwas richten, das man nicht treffen will.</li>
+                    <li id="SIVO_3">Solange die Visiervorrichtung nicht auf das Ziel gerichtet ist, ist der Zeigefinger
+                        ausserhalb des
+                        Abzugbügels zu halten.</li>
+                    <li>Seines Zieles sicher sein.</li>
+                </ol>
+            </div>
+            <br>
+
+            <p class="visible" id="view_grundsatz" onclick="Appear_grundsatz()">
+            </p>
+            <div class="invisible" id="hidden_grundsatz">
+
+                <ul>
+                    <li>Festahalten der WAffe (fest nicht verkrampft)</li>
+                    <li>Anschlagsart (bequem und stabil)</li>
+                    <li>Zielen (Korn scharf)</li>
+                    <li>Atemtechnik (nicht daran denken)</li>
+                    <li>Schussabgabe (bis an den Anschlag)</li>
+                </ul>
+            </div>
+            <br>
+            <p class="visible" id="view_sequenz" onclick="Appear_sequenz()">
+            </p>
+
+            <div class="invisible" id="hidden_sequenz">
+                <ul>
+                    <li>Identifikation</li>
+                    <li>Anschlagen "Elevation"</li>
+                    <li>Zielen</li>
+                    <li>Platzieren des Zeigefingers auf dem Abzug</li>
+                    <li>Schiessen</li>
+                    <li>Zielanalyse</li>
+                    <li>Scanning, Umfeld- und Wirkungskontrolle</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Munition">
+            <h2>Munitionsarten</h2>
+            <br>
+            <table>
+                <tr class="table2">
+                    <th class="table2">Nummer</th>
+                    <th class="table2">Munitionsart</th>
+                    <th class="table2">Farbe</th>
+                    <th class="table2">Details</th>
+                </tr>
+                <tr class="tr" style="background-color:white;">
+                    <td>590</td>
+                    <td>Sport- und Spezialmunition</td>
+                    <td>weiss</td>
+                    <td>gefährlich</td>
+                </tr>
+                <tr style="background-color:gray; color:white;">
+                    <td>591</td>
+                    <td>Kampfmunition</td>
+                    <td>grau</td>
+                    <td>Wird im Kampf verwendet, gefährlich.</td>
+                </tr>
+                <tr style="background-color: black; color:white;">
+                    <td>592</td>
+                    <td>Übungsmunition</td>
+                    <td>schwarz</td>
+                    <td>Für Übungen, gefährlich</td>
+                </tr>
+                <tr style="background-color:green; color:white;">
+                    <td>593</td>
+                    <td>Markiermunition</td>
+                    <td>grün</td>
+                    <td>Beispielsweise das RSG, gefährlich</td>
+                </tr>
+                <tr style="background-color:blue;color:white;">
+                    <td>594</td>
+                    <td>Hilfsmunition</td>
+                    <td>blau</td>
+                    <td>Beispielsweise Rauchgranate, um zu flüchten, ungefährlich</td>
+                </tr>
+                <tr style="background-color:orange;">
+                    <td>595</td>
+                    <td>Manipuliermunition</td>
+                    <td>braun</td>
+                    <td>Wird für das Manipulieren und kennenlernen der Waffe verwendet, ungefährlich</td>
+                </tr>
+                <tr class="tr" style="background-color:white;">
+                    <td>599</td>
+                    <td>Munitionszubehör</td>
+                    <td>divers</td>
+                    <td>Packungen, Zubehör, ungefährlich</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+
 </body>
+<script src="script.js"></script>
+
 </html>
