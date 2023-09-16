@@ -47,12 +47,7 @@ a {
   padding: 20px;
   align-items: center;
 }
-img {
-  width: 65%;
-  align-self: center;
-  border-radius: 50px;
-  margin: 20px;
-}
+
 table,
 tr,
 th,
