@@ -20,14 +20,7 @@ body {
 
 #tips,
 #infos {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 154, 0, 1),
-    rgba(208, 222, 33, 1),
-    rgba(79, 220, 74, 1),
-    rgba(63, 218, 216, 1),
-    rgba(47, 201, 226, 1)
-  );
+  background: linear-gradient(90deg, powderblue, white);
 
   border-radius: 40px;
   margin: 30px;
@@ -66,4 +59,21 @@ ul {
   #container {
     grid-template-columns: 1fr;
   }
+}
+
+#hymne {
+  display: inline-block;
+  width: 60%;
+  height: 100px;
+  padding: 20px;
+  margin: auto;
+  overflow: auto;
+  font-size: 120%;
+  font-family: "Trebuchet MS";
+  background-color: aqua;
+  text-align: center;
+  border-radius: 20px;
+}
+.top {
+  text-align: center;
 }
