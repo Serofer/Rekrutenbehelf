@@ -26,7 +26,7 @@
                 Morse-Alphabet und zum NATO-Alphabet. Das NATO-Alphabet ist essentiell für Funkaufklärer, da man damit
                 eindeutig Buchstaben sagen kann. Bei schlechtem Signal können dadurch Buchstaben wie "M" und "N"
                 unterschieden werden, sodass alles klar buchstabiert werden kann.</p>
-
+            <br>
             <table>
                 <tr>
                     <th>Buchstabe</th>
@@ -172,7 +172,10 @@
             <p>Hier kannst du mittels diesem Tool selbst Morsecode generieren lassen, zurück übersetzen und den Ton
                 abspielen. Mithilfe der Sliders kannst du diverse Einstellungen vornehmen. Viel Spass : &#41;</p>
             <br>
+
+            <br>
             <div id="boxes">
+
                 <form name="A_Form" action="">
                     <textarea name="alphabetic" id="alpha" cols="30" rows="10"></textarea>
                     <br>
@@ -183,12 +186,39 @@
                     <br>
                     <input class="button" type="button" value="Translate to Alphanumeric" onclick="MorseToAlpha()">
                 </form>
+
+            </div>
+            <br>
+            <p>Hier kannst du die Einstellungen für die Tonlänge ändern und dir nach dem generieren des Morse-Codes
+                kannst du dir die Audio-Datei anhören.</p>
+            <br>
+            <div class="slidecontainer">
+                <div id="Sign_Pause">
+                    <p>Pause zwischen Zeichen</p>
+                    <br>
+                    <input type="range" min="0" max="2000" class="slider" id="sign">
+                    <br>
+                    <p>Value: <span id="sign_value"></span> ms</p>
+                </div>
+                <div id="Word_Pause">
+                    <p>Pause zwischen Wörter</p>
+                    <br>
+                    <input type="range" min="0" max="4000" class="slider" id="word">
+                    <br>
+                    <p>Value: <span id="word_value"></span> ms</p>
+                    <br>
+                </div>
+            </div>
+            <div class="buttons">
+                <input class="button" type="button" value="Play" onclick="generate_audio()">
+                <input class="button" type="button" value="Download">
             </div>
         </div>
     </div>
 
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
 <script src="script.js"></script>
 
 </html>
