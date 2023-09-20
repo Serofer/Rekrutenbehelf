@@ -1,6 +1,25 @@
 var translation_string = "";
 var translated_morse = "";
 
+//without a function
+var slider_sign = document.getElementById("sign");
+var slider_word = document.getElementById("word");
+var output_sign = document.getElementById("sign_value");
+var output_word = document.getElementById("word_value");
+var length_unit = 500;
+
+var word_pause = 1000;
+output_sign.innerHTML = display_value(slider_sign, output_sign, length_unit);
+output_word.innerHTML = display_value(slider_word, output_word, word_pause);
+
+function display_value(slider, output, LENGTH_VALUE) {
+  slider.oninput = function () {
+    output.innerHTML = this.value;
+    LENGTH_VALUE = slider.value;
+  };
+}
+//without a function ends here
+
 const dictionary_A = {
   A: ".-",
   B: "-...",
@@ -103,36 +122,45 @@ function AlphaToMorse() {
   translation_string = "";
 }
 
-var slider_sign = document.getElementById("sign");
-var slider_word = document.getElementById("word");
-var output_sign = document.getElementById("sign_value");
-var output_word = document.getElementById("word_value");
-var sign_pause = 500;
-var word_pause = 1000;
-output_sign.innerHTML = display_value(slider_sign, output_sign, sign_pause);
-output_word.innerHTML = display_value(slider_word, output_word, word_pause);
-
-function display_value(slider, output, pause) {
-  slider.oninput = function () {
-    output.innerHTML = this.value;
-    pause = slider.value;
-  };
-}
-
 function generate_audio() {
-  let every_sign = new Array();
-  const synth = new Tone.Synth().toDestination();
-  synth.triggerAttackRelease("C4", 2);
+  console.log(slider_sign.value);
+  var unit_sec = slider_sign.value / 1000;
+  console.log(unit_sec);
+  var delay = 0;
+  const synth = new Tone.Synth().toDestination(); //for the sound
+  const now = Tone.now(); //starts a time tracker
+
+  function sound_creator(tone_length) {
+    //sound creation
+
+    synth.triggerAttackRelease("C4", tone_length, now + delay);
+    Tone.start();
+    console.log("goes to function");
+  }
 
   morse = document.M_Form.morse.value;
 
-  morse_words = morse.split(" "); //creates an array with all of the "words"
+  sign_array = morse.split(""); //creates an array with all signs and spaces
+  //const sign_array = [".", "-", " ", "."];
+  for (let i = 0; i < sign_array.length; i++) {
+    if (sign_array[i] == ".") {
+      sound_creator(unit_sec);
+      delay += 2 * unit_sec;
+      console.log(delay);
+    } else if (sign_array[i] == "-") {
+      sound_creator(3 * unit_sec);
+      delay += 4 * unit_sec;
+      console.log("yeah");
 
-  for (let i = 0; i < morse_words.length; i++) {
-    morse_sign = morse_words[i].split(""); //creates an array with all the signs of the word
-    //creating an array consisting of all the parts plus after each morse_sign array adding a space element to see where to set the break for the longer break
-    for (let j = 0; j < morse_sign.length; i++) {}
+      //add one pause_length unit
+    } else if (sign_array[i] == " ") {
+      if (sign_array[i + 1] == "/" || sign_array[i - 1] == "/") {
+        //do nothing
+      } else {
+        delay += 2 * unit_sec;
+      }
+    } else if (sign_array[i] == "/") {
+      delay += 6 * unit_sec;
+    }
   }
-
-  Tone.start();
 }
