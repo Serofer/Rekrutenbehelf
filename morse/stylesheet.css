@@ -112,3 +112,14 @@ tr:nth-child(even) {
     font-size: 100%;
   }
 }
+@media (max-width: 700px) {
+  #home {
+    width: 90vw;
+  }
+  #explanation,
+  #tool {
+    width: 100%;
+    margin: 0px;
+    margin-top: 5vw;
+  }
+}

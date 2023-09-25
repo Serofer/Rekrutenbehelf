@@ -2,36 +2,33 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
-    background-image: url("images/camouflage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: system-ui;
-    height: 100%;
-  }
-  #container {
-    min-height: 100%;
-  }
+  background-image: url("images/camouflage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: system-ui;
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+}
 
-  header {
-    margin: 40px;
-    text-align: center;
-    background-color: greenyellow;
-    padding: 30px;
-    border-radius: 20px;
-  }
+header {
+  margin: 40px;
+  text-align: center;
+  background-color: greenyellow;
+  padding: 30px;
+  border-radius: 20px;
+}
 .video {
   float: right;
   padding: 20px;
-  position: relative;
-  right: 100px;
   margin-top: 50px;
+  margin-right: 5vw;
 }
-
 
 nav {
   float: left;
@@ -44,7 +41,6 @@ nav {
 ul {
   list-style-type: none;
 }
-
 
 li {
   padding: 10px;
@@ -60,7 +56,6 @@ li:hover {
   padding: 10px;
 }
 
-
 h2 {
   color: white;
   margin-inline-start: 30px;
@@ -74,7 +69,7 @@ article {
 }
 .intro {
   color: white;
-  margin: 30px;
+  padding: 20px;
 }
 
 /*everything inside the footer */
@@ -85,30 +80,24 @@ article {
   clear: both;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
 }
 address {
   float: left;
   margin-inline-start: 30px;
   margin-top: 30px;
-  
 }
 .coords {
   float: right;
   margin-top: 30px;
   margin-right: 20px;
-  
-  
-  
 }
 #text {
-    width:100%;
-    padding:10px;
+  width: 100%;
+  padding: 10px;
 }
 #display {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-   
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 #button {
   width: 200px;
@@ -120,11 +109,34 @@ address {
 
 dynamic home page */
 
-@media(max-width: 800px) {
-    #footer {
-        grid-template-columns: 1fr;
-        height:400px;
-    }
+@media (max-width: 700px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #footer {
+    grid-template-columns: 1fr;
+    height: 400px;
+    clear: both;
+  }
+
+  nav {
+    width: 90vw;
+    float: none;
+    margin: auto;
+  }
+  article {
+    width: 90vw;
+    float: none;
+    margin: auto;
+    margin-top: 5vw;
+  }
+  .video {
+    float: none;
+    margin: 0;
+    float: left;
+  }
+  iframe {
+    width: 90vw;
+  }
 }
-
-

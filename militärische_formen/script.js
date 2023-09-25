@@ -1,3 +1,4 @@
+//this whole code is completely unnecessary because you could just use the <details> tag. But I wanted to learn some JS.
 var x = document.getElementById("view_ruhn");
 var y = document.getElementById("view_achtung");
 var clicked_ruhn = "false";

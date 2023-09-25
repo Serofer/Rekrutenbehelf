@@ -77,3 +77,17 @@ ul {
 .top {
   text-align: center;
 }
+@media (max-width: 700px) {
+  #home {
+    width: 90vw;
+  }
+  #hymne {
+    width: 90%;
+  }
+  #tips,
+  #infos {
+    width: 100vw;
+    margin: 0px;
+    margin-top: 5vw;
+  }
+}

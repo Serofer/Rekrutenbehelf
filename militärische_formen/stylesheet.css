@@ -74,21 +74,21 @@ li {
   width: 700px;
   mix-blend-mode: multiply;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1270px) {
   #container {
     grid-template-columns: 1fr;
   }
   #Stellungen {
-    width: 90%;
+    width: 90;
   }
   #other {
     width: 90%;
   }
   img {
-    width: 400px;
+    width: 70vw;
   }
   #org {
-    width: 500px;
+    width: 70vw;
   }
   #home {
     width: 60%;

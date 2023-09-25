@@ -37,7 +37,7 @@ header {
   background-color: lightgray;
   border-radius: 5px;
   padding: 10px;
-  width: 15%;
+  width: 20%;
   margin-inline-start: 30px;
 }
 #home:hover {
@@ -61,6 +61,10 @@ img {
   width: 30px;
   margin: 10px;
 }
+img:hover {
+  background-color: hsl(240, 60%, 60%);
+  border-radius: 20%;
+}
 
 li {
   padding: 10px;
@@ -70,5 +74,15 @@ li {
 @media (max-width: 800px) {
   #container {
     grid-template-columns: 1fr;
+  }
+  #home {
+    width: 90vw;
+  }
+  #normal,
+  #download {
+    width: 100%;
+    margin: 0px;
+    margin-top: 5vw;
+    font-size: 80%;
   }
 }

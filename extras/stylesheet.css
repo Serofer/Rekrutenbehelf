@@ -13,12 +13,6 @@ body {
   height: 100%;
 }
 
-#container {
-  min-height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 header {
   margin: 30px;
   text-align: center;
@@ -30,8 +24,8 @@ header {
   background-color: lightgray;
   border-radius: 5px;
   padding: 10px;
-  width: 15%;
-  margin-inline-start: 30px;
+  width: 20%;
+  margin-inline-start: 5vw;
   margin: 30px;
 }
 #home:hover {
@@ -46,12 +40,21 @@ a {
   margin: auto;
   border-radius: 30px;
   padding: 30px;
-  width: 70%;
+  width: 90vw;
 }
 img {
   border-radius: 100px;
-  width: 300px;
+  width: 40vw;
 }
 img:hover {
   border: 5px solid blue;
+}
+@media (max-width: 700px) {
+  #home {
+    width: 90vw;
+    margin-bottom: 5vw;
+  }
+  img {
+    width: 70vw;
+  }
 }

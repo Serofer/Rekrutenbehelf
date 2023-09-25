@@ -76,4 +76,26 @@ img {
   #container {
     grid-template-columns: 1fr;
   }
+  #overview {
+    width: 80%;
+    margin: auto;
+    margin-top: 5vw;
+  }
+}
+@media (max-width: 700px) {
+  #home {
+    width: 90vw;
+  }
+  #soldat,
+  #further {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  table,
+  tr,
+  th,
+  td {
+    font-size: 90%;
+  }
 }

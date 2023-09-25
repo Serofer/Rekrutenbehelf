@@ -67,7 +67,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 table {
-  width: 120%;
+  width: 100%;
 }
 img {
   width: 200px;
@@ -81,10 +81,7 @@ ol {
 #small {
   font-size: 70%;
 }
-#parts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+
 #bereitschaft {
   width: 160%;
 }
@@ -98,17 +95,23 @@ ol {
   margin: 10px;
   width: 50%;
 }
-#eskalation {
-  width: 0;
-  height: 0;
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
-  border-bottom: 400px solid lightgreen;
-  width: 50%;
-}
-
 @media (max-width: 1000px) {
   #container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  #home {
+    width: 90vw;
+  }
+
+  #wache,
+  #rsg {
+    width: 100%;
+  }
+  #stats {
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
