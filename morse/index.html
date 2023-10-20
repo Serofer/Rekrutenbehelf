@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exkurs: Morsen</title>
+    <title>Morse Übersetzer</title>
+    <link rel="icon" type="image/x-icon" href="/pngegg.ico">
     <link rel="stylesheet" href="stylesheet.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
     <header>
-        <h1>Exkurs: Morsen</h1>
+        <h1>Morsen</h1>
     </header>
-    <div id="home">
-        <a href="https://serofer.github.io/Rekrutenbehelf/home/">Zurück zur HomePage</a>
-    </div>
+    <!--one section-->
     <div id="container">
         <div id="explanation">
             <h2>Morsen im Militär</h2>
@@ -164,59 +171,64 @@
                     <td>--..</td>
                 </tr>
             </table>
-
         </div>
+
         <div id="tool">
             <h2>Morsecode praktisch üben und anwenden</h2>
             <br>
             <p>Hier kannst du mittels diesem Tool selbst Morsecode generieren lassen, zurück übersetzen und den Ton
                 abspielen. Mithilfe der Sliders kannst du diverse Einstellungen vornehmen. Viel Spass : &#41;</p>
             <br>
-
             <br>
-            <div id="boxes">
-
-                <form name="A_Form" action="">
-                    <textarea name="alphabetic" id="alpha" cols="30" rows="10"></textarea>
-                    <br>
-                    <input class="button" type="button" value="Translate to Morse" onclick="AlphaToMorse()">
-                </form>
-                <form name="M_Form" action="">
-                    <textarea name="morsecode" id="morse" cols="30" rows="10"></textarea>
-                    <br>
-                    <input class="button" type="button" value="Translate to Alphanumeric" onclick="MorseToAlpha()">
-                </form>
-
-            </div>
-            <br>
-            <p>Hier kannst du die Einstellungen für die Tonlänge ändern und dir nach dem generieren des Morse-Codes
-                kannst du dir die Audio-Datei anhören.</p>
-            <br>
-            <div class="slidecontainer">
-                <div id="Sign_Pause">
-                    <p>Länge einer Einheit (Punkt)</p>
-                    <br>
-                    <input type="range" min="0" max="2000" class="slider" id="sign">
-                    <br>
-                    <p>Value: <span id="sign_value"></span> ms</p>
-                </div>
-                <div id="Word_Pause">
-                    <p>Faktor der Einheit für den Strich</p>
-                    <br>
-                    <input type="range" min="0" max="4000" class="slider" id="word">
-                    <br>
-                    <p>Value: <span id="word_value"></span> ms</p>
+            <div id="template">
+                <div id="boxes">
+                    <div id="alpha" contenteditable="true"></div>
+                    <input class="button_translate" type="button" value="Translate to Morse" onclick="AlphaToMorse()">
+                    <div id="morse" contenteditable="true"></div>
+                    <input class="button_translate" type="button" value="Translate to Alphanumeric"
+                        onclick="MorseToAlpha()">
                     <br>
                 </div>
-            </div>
-            <div class="buttons">
-                <input class="button" type="button" value="Play" onclick="generate_audio()">
-                <input class="button" type="button" value="Download">
+
+
+                <div id="custom">
+                    <p>Hier kannst du die Einstellungen für die Tonlänge ändern und dir nach dem generieren des
+                        Morse-Codes
+                        kannst du dir die Audio-Datei anhören.</p>
+                    <br>
+                    <div class="slidecontainer">
+                        <div id="WordsPerMinute">
+                            <p>Wörter pro Minute</p>
+                            <br>
+                            <input type="range" min="1" max="60" class="slider" id="WPM">
+                            <br>
+                            <p>Value: <span id="WPM_value">30</span> wpm</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div id="play_pause">
+                            <button type="button" class="button" onclick="init_audio()">
+                                <span class="glyphicon glyphicon-play"></span> Play
+                            </button>
+                        </div>
+                        <div id="stop">
+                            <button type="button" class="button" onclick="stop_audio()">
+                                <span class="glyphicon glyphicon-stop"></span> Stop
+                            </button>
+                            <br>
+                        </div>
+                        <div id="reset">
+                            <input class="button" type="button" value="Reset" onclick="reset_fields()">
+
+                        </div>
+                        <div id="download">
+                            <input class="button" type="button" value="Download" onclick="download_audio()">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
 <script src="script.js"></script>
