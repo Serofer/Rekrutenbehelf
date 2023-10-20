@@ -84,23 +84,10 @@ article {
   margin-right:1vw;
   border-radius:1%;
 }
-address {
-  float: left;
-  margin-inline-start: 30px;
-  margin-top: 30px;
-}
-.coords {
-  float: right;
-  margin-top: 30px;
-  margin-right: 20px;
-}
+
 #text {
   width: 100%;
   padding: 10px;
-}
-#display {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 #button {
   width: 200px;
