@@ -74,12 +74,15 @@ article {
 
 /*everything inside the footer */
 #footer {
-  background-color: greenyellow;
+  background-color: rgba(154,205,50, 0.9);
   position: relative;
-  height: 200px;
+  height: 15vh;
   clear: both;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-left:1vw;
+  margin-right:1vw;
+  border-radius:1%;
 }
 address {
   float: left;
@@ -116,7 +119,7 @@ dynamic home page */
   }
   #footer {
     grid-template-columns: 1fr;
-    height: 400px;
+    height: 20vh;
     clear: both;
   }
 

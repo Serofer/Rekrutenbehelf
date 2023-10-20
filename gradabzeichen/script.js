@@ -88,7 +88,7 @@ function display_table() {
       content +
       " <tr> <td>" +
       grad[i] +
-      "</td><td><img class='table_pictures' src='/gradabzeichen/images/Grad/" +
+      "</td><td><img class='table_pictures' src='images/Grad/" +
       grad[i] +
       ".jpg' alt='Image_" +
       grad_short[i] +
@@ -107,7 +107,7 @@ function display_trupp() {
       content_tr +
       " <tr> <td> " +
       trupp[i] +
-      "</td> <td><img class='table_pictures' src='/gradabzeichen/images/Trupp/" +
+      "</td> <td><img class='table_pictures' src='images/Trupp/" +
       trupp[i] +
       ".jpg' alt=" +
       trupp[i] +
