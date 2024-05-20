@@ -68,6 +68,10 @@ body {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
+
 
 #boxes {
   display: flex;
@@ -143,6 +147,11 @@ a {
 }
 
 @media (max-width: 767px) {
+  #home {
+    width: 90vw;
+    margin: auto;
+  }
+
   #explanation,
   #tool,
   #boxes,
