@@ -5,9 +5,13 @@ body {
 }
 
 header {
-  background-color: green;
+  margin: auto;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
   text-align: center;
-  padding: 20px;
+  background-color: greenyellow;
+  padding: 30px;
+  border-radius: 20px;
 }
 
 #container {
